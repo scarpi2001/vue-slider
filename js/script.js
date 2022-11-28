@@ -30,9 +30,18 @@ createApp({
     }
   },
   methods: {
-    //metodo navigazione
+    //metodi navigazione
     nextImage() {
         this.active++;
+        if (this.active > this.slides.length - 1) {
+            this.active = 0;
+        }
+    },
+    prevImage() {
+        this.active--;
+        if (this.active < 0) {
+            this.active = this.slides.length - 1;
+        }
     }
   }
  
