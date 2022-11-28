@@ -42,6 +42,9 @@ createApp({
         if (this.active < 0) {
             this.active = this.slides.length - 1;
         }
+    },
+    currentImage(index) {
+        this.active = index;   
     }
   }
  
